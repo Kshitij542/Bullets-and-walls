@@ -34,22 +34,19 @@ function draw() {
           wall.shapeColor = "green";
       }
   }
-
-  function hasCollided(object1, object2){
-      bulletRightEdge = object1.x + object1.width;
-      wallLeftEdge = object2.x;
-      if(bulletRightEdge>=wallLeftEdge){
-          return true;
-      }
-      return false;
-  }
-
-
-
-
   drawSprites();
 }
 
+function hasCollided(lbullet,lwall)
+{
+  bulletRightEdge=lbullet.x+lbullet.width;
+  wallLeftEdge=lwall.x;
+  if(bulletRightEdge>=wallLeftEdge)
+  {
+    return true
+  }
+return false;
+}
 
 
 
